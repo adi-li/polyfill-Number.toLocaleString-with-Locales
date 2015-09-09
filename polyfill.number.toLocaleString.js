@@ -118,8 +118,15 @@
             "usd": "$",
             "ron": "RON",
             "rmb": "¥",
+            "cny": "¥",
             "hkd": "HK$",
-            "jpy": "¥"
+            "jpy": "¥",
+            "krw": "₩",
+            "sgd": "$",
+            "nzd": "$",
+            "cad": "$",
+            "aud": "$",
+            "gbp": "£"
         };
 
         var currencyFormats = {
