@@ -87,8 +87,12 @@
             "de-CH": dotThousCommaDec,
             "de-LI": dotThousCommaDec,
             "de-BE": dotThousCommaDec,
+            ja: commaThousDotDec,
             ro: dotThousCommaDec,
             "ro-RO": dotThousCommaDec,
+            zh: commaThousDotDec,
+            "zh-Hant": commaThousDotDec,
+            "zh-Hans": commaThousDotDec
         };
 
         var currencyFormatMap = {
@@ -101,15 +105,22 @@
             "de-CH": "prespace",
             "de-LI": "post",
             "de-BE": "post",
+            ja: "pre",
             ro: "post",
-            "ro-RO": "post"
+            "ro-RO": "post",
+            zh: "pre",
+            "zh-Hant": "prespace",
+            "zh-Hans": "pre"
         };
 
         var currencySymbols = {
-	        "eur": "€",
-	        "usd": "$",
-          "ron": "RON"
-        }
+            "eur": "€",
+            "usd": "$",
+            "ron": "RON",
+            "rmb": "¥",
+            "hkd": "HK$",
+            "jpy": "¥"
+        };
 
         var currencyFormats = {
             pre: "{{code}}{{num}}",
@@ -141,7 +152,7 @@
 	            } else {
                     sNum = renderFormat(format, {
                         num: sNum,
-                        code: currencySymbols[options.currency.toLowerCase()]
+                        code: currencySymbols[options.currency.toLowerCase()] || ''
                     });
 	            }
             }
